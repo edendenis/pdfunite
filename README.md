@@ -45,8 +45,7 @@ Para configurar/instalar/usar o `pdfunite` no `Linux Ubuntu`, você pode seguir 
 
 Para juntar dois arquivos PDF em um único no Linux, você pode usar várias ferramentas disponíveis na linha de comando. É possível usar o `pdfunite`, parte do pacote `poppler-utils`.
 
-1. **Para instalar o `poppler-utils` (que inclui o `pdfunite`), use o seguinte comando:** Para sistemas baseados em Debian (como Ubuntu): `sudo apt install poppler-utils`
-Para sistemas baseados em Red Hat (como Fedora):
+1. **Para instalar o `poppler-utils` (que inclui o `pdfunite`), use o seguinte comando:** Para sistemas baseados em Debian (como Ubuntu): `sudo apt install poppler-utils -y`
 
 
 ## 1.2 Juntar os arquivos `.pdf` com o `pdfunite`
@@ -75,7 +74,7 @@ Para configurar/instalar/usar o `pdfunite` no `Linux Ubuntu`sem precisar digitar
 2. Digite o seguinte comando e pressione `Enter`:
 
     ```
-    sudo apt clean                                                            
+    sudo apt clean
     sudo apt autoclean
     sudo apt autoremove -y
     sudo apt update
@@ -83,13 +82,13 @@ Para configurar/instalar/usar o `pdfunite` no `Linux Ubuntu`sem precisar digitar
     sudo apt clean
     sudo apt list --upgradable
     sudo apt full-upgrade -y
-    sudo apt-get install poppler-utils
+    sudo apt-get install poppler-utils -y
     ```
 
 
 ## Referências
 
-[3] OPENAI. ***Unir arquivos PDF: pdftk vs. pdfunite:***. Disponível em: <https://chat.openai.com/c/592706f3-7b05-4cff-859e-c5b1727e4735> (texto adaptado). Acessado em: 19/02/2024 13:47.
+[3] OPENAI. ***Unir arquivos pdf: pdftk vs. pdfunite:***. Disponível em: <https://chat.openai.com/c/592706f3-7b05-4cff-859e-c5b1727e4735> (texto adaptado). Acessado em: 19/02/2024 13:47.
 
 [2] OPENAI. ***Vs code: editor popular***. Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). Acessado em: 19/02/2024 13:48.
 
