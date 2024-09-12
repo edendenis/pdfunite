@@ -1,24 +1,24 @@
-# Como configurar/instalar/usar o `pdfunite` no `Linux Ubuntu`
+# Como configurar/instalar/usar o `img2pdf` no `Linux Ubuntu`
 
 ## Resumo
 
-Neste documento estão contidos os principais comandos e configurações para configurar/instalar o `pdfunite` no `Linux Ubuntu`.
+Neste documento estão contidos os principais comandos e configurações para configurar/instalar o `img2pdf` no `Linux Ubuntu`.
 
 ## _Abstract_
 
-_In this document are contained the main commands and settings to set up/install the `pdfunite` on `Linux Ubuntu`._
+_In this document are contained the main commands and settings to set up/install the `img2pdf` on `Linux Ubuntu`._
 
 
 ## Descrição [2]
 
-### `pdfunite`
+### `img2pdf`
 
-O `pdfunite` é uma ferramenta de linha de comando utilizada para mesclar múltiplos arquivos PDF em um único documento. Com essa ferramenta, os usuários podem combinar várias páginas ou documentos PDF de forma rápida e eficiente, facilitando a organização e compartilhamento de informações em um único arquivo PDF consolidado.
+O `img2pdf` é uma ferramenta de linha de comando para converter imagens em arquivos PDF no sistema Linux. Ele permite a criação de documentos PDF a partir de imagens em diversos formatos, como JPEG, PNG e TIFF. O `img2pdf` é eficiente e flexível, oferecendo opções para ajustar a qualidade, o tamanho e a disposição das imagens no PDF resultante. É uma ferramenta leve, ideal para usuários que precisam converter rapidamente imagens para PDF sem perder qualidade, e é particularmente útil para a criação de documentos digitais ou arquivos de apresentação a partir de imagens.
 
 
-## 1. Como configurar/instalar/usar o `pdfunite` no `Linux Ubuntu` [1]
+## 1. Como configurar/instalar/usar o `img2pdf` no `Linux Ubuntu` [1]
 
-Para configurar/instalar/usar o `pdfunite` no `Linux Ubuntu`, você pode seguir estes passos:
+Para configurar/instalar/usar o `img2pdf` no `Linux Ubuntu`, você pode seguir estes passos:
 
 1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
 
@@ -41,33 +41,37 @@ Para configurar/instalar/usar o `pdfunite` no `Linux Ubuntu`, você pode seguir 
     2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
     
 
-### 1.1 Configurar/Instalar/usar o `pdfunite`
+### 1.1 Configurar/Instalar/usar o `img2pdf`
 
-Para juntar dois arquivos PDF em um único no Linux, você pode usar várias ferramentas disponíveis na linha de comando. É possível usar o `pdfunite`, parte do pacote `poppler-utils`.
+Para juntar dois arquivos PDF em um único no `Linux Ubuntu`, você pode usar várias ferramentas disponíveis na linha de comando. É possível usar o `img2pdf`, parte do pacote `poppler-utils`.
 
-1. **Para instalar o `poppler-utils` (que inclui o `pdfunite`), use o seguinte comando:** Para sistemas baseados em Debian (como Ubuntu): `sudo apt install poppler-utils -y`
+1. **Instale o `img2pdf`**: Agora, você pode instalar o pacote com o comando: `sudo apt install img2pdf`
+
+2. **Verifique a instalação**: Após a instalação, você pode verificar se o `img2pdf` foi instalado corretamente rodando o comando: `img2pdf --version`
+
+Isso deve mostrar a versão do `img2pdf`, confirmando que ele foi instalado corretamente.
 
 
-## 1.2 Juntar os arquivos `.pdf` com o `pdfunite`
+## 1.2 Juntar os arquivos `.pdf` com o `img2pdf`
 
-1. **Para juntar os arquivos `.pdf`, use o comando:** `pdfunite arquivo1.pdf arquivo2.pdf arquivo_unido.pdf`
+1. **Para juntar os arquivos `.pdf`, use o comando:** `img2pdf arquivo1.jpg arquivo2.png -o output.pdf`
 
     Novamente, substitua `arquivo1.pdf` e `arquivo2.pdf` pelos nomes dos seus arquivos `.pdf` que deseja juntar, e `arquivo_unido.pdf` pelo nome que deseja dar ao arquivo PDF resultante.
 
-## 1.2.1 Juntar muitos arquivos `.pdf` com o `pdfunite`
+## 1.2.1 Juntar muitos arquivos `.pdf` com o `img2pdf`
 
-1. **Para juntar muitos arquivos `.pdf`, use o comando:** `pdfunite arquivo1.pdf arquivo2.pdf arquivo3.pdf arquivo_unido.pdf`
+1. **Para juntar muitos arquivos `.pdf`, use o comando:** `img2pdf arquivo1.jpg arquivo2.png arquivo3.png -o output.pdf`
 
     Novamente, substitua `arquivo1.pdf`, `arquivo2.pdf` e `arquivo3.pdf` pelos nomes dos seus arquivos `.pdf` que deseja juntar, e `arquivo_unido.pdf` pelo nome que deseja dar ao arquivo `.pdf` resultante.
 
-    1.1 Se você tiver uma lista grande de arquivos `.pdf` e eles estiverem nomeados de forma sequencial ou possuírem um padrão nos nomes, você pode até utilizar wildcards (coringas) ou outras técnicas de shell para especificar os arquivos de entrada. Por exemplo: `pdfunite arquivo*.pdf arquivo_unido.pdf`
+    1.1 Se você tiver uma lista grande de arquivos `.pdf` e eles estiverem nomeados de forma sequencial ou possuírem um padrão nos nomes, você pode até utilizar wildcards (coringas) ou outras técnicas de shell para especificar os arquivos de entrada. Por exemplo: `img2pdf arquivo*.pdf arquivo_unido.pdf`
 
     Esses comandos unirão todos os arquivos `.pdf` no diretório atual que correspondem ao padrão especificado (neste caso, todos os arquivos que começam com `"arquivo"` e terminam com `".pdf"`) em um único arquivo `.pdf`.
 
 
 ## 2. Código completo para configurar/instalar/usar
 
-Para configurar/instalar/usar o `pdfunite` no `Linux Ubuntu`sem precisar digitar linha por linha, você pode seguir estas etapas:
+Para configurar/instalar/usar o `img2pdf` no `Linux Ubuntu`sem precisar digitar linha por linha, você pode seguir estas etapas:
 
 1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
 
@@ -82,13 +86,14 @@ Para configurar/instalar/usar o `pdfunite` no `Linux Ubuntu`sem precisar digitar
     sudo apt clean
     sudo apt list --upgradable
     sudo apt full-upgrade -y
-    sudo apt-get install poppler-utils -y
+    sudo apt-get img2pdf -y
+    img2pdf --version
     ```
 
 
 ## Referências
 
-[3] OPENAI. ***Unir arquivos pdf: pdftk vs. pdfunite:***. Disponível em: <https://chat.openai.com/c/592706f3-7b05-4cff-859e-c5b1727e4735> (texto adaptado). Acessado em: 19/02/2024 13:47.
+[3] OPENAI. ***Unir arquivos pdf: pdftk vs. img2pdf:***. Disponível em: <https://chat.openai.com/c/592706f3-7b05-4cff-859e-c5b1727e4735> (texto adaptado). Acessado em: 19/02/2024 13:47.
 
 [2] OPENAI. ***Vs code: editor popular***. Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). Acessado em: 19/02/2024 13:48.
 
